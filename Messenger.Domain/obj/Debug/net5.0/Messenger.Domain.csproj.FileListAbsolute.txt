@@ -1,0 +1,12 @@
+/home/artem/matmex-messenger/Messenger.Domain/bin/Debug/net5.0/Messenger.Domain.deps.json
+/home/artem/matmex-messenger/Messenger.Domain/bin/Debug/net5.0/Messenger.Domain.dll
+/home/artem/matmex-messenger/Messenger.Domain/bin/Debug/net5.0/ref/Messenger.Domain.dll
+/home/artem/matmex-messenger/Messenger.Domain/bin/Debug/net5.0/Messenger.Domain.pdb
+/home/artem/matmex-messenger/Messenger.Domain/obj/Debug/net5.0/Messenger.Domain.csproj.AssemblyReference.cache
+/home/artem/matmex-messenger/Messenger.Domain/obj/Debug/net5.0/Messenger.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/artem/matmex-messenger/Messenger.Domain/obj/Debug/net5.0/Messenger.Domain.AssemblyInfoInputs.cache
+/home/artem/matmex-messenger/Messenger.Domain/obj/Debug/net5.0/Messenger.Domain.AssemblyInfo.cs
+/home/artem/matmex-messenger/Messenger.Domain/obj/Debug/net5.0/Messenger.Domain.csproj.CoreCompileInputs.cache
+/home/artem/matmex-messenger/Messenger.Domain/obj/Debug/net5.0/Messenger.Domain.dll
+/home/artem/matmex-messenger/Messenger.Domain/obj/Debug/net5.0/ref/Messenger.Domain.dll
+/home/artem/matmex-messenger/Messenger.Domain/obj/Debug/net5.0/Messenger.Domain.pdb

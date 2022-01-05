@@ -1,0 +1,21 @@
+@model Chat
+
+<div class="chat-output">
+    @foreach(var message in Model.Messages)
+    {
+        <div class="message">
+            <header>@message.Sender.Name:</header>
+            <p>@message.Content</p>
+            <footer>@message.Date</footer>
+        </div>
+    }
+</div>
+
+@using (Html.BeginForm("SendMessage", "Home", new { chatId = @Model.Id}))
+{
+    <div class="chat-input">
+        <input type="text" name="content">
+        <input type="submit" value="Send Message" />
+    </div>
+}
+

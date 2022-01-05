@@ -1,0 +1,126 @@
+body 
+{
+    margin: 0;
+    height: 100vh;
+    width: 100wh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: black;
+    z-index: 100;
+    height: 40px;
+}
+
+.main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.side-menu {
+    background-color: royalblue;
+    width: 60px;
+    z-index: 50;
+    box-shadow: 0px 0px 8px 4px rgba(67, 0, 0, 0.2);
+    flex-direction: row;
+}
+.chat-navigation-button {
+    display: flex;
+    width:100%;
+    border-radius:50%;
+    justify-content: center;
+    overflow:hidden;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    font-size:8px;
+    padding:50% 0;
+    line-height:0;
+    position:relative;
+    background:lemonchiffon;
+    color:black;
+    font-family: Impact, Charcoal, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: uppercase;
+}
+
+.chat-navigation-button:hover{
+    box-shadow: 0px 0px 4px 4px rgba(37, 59, 255, 0.781);
+}
+
+.chat-navigation-button > strong {
+    font-size: 30px;
+}
+
+.chat {
+    background-color: white;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-output{
+    background-color: rgb(27, 42, 133);
+    flex-grow: 1;
+}
+
+.chat-input{
+    background-color: rgb(182, 234, 250);
+    min-height: 40px;
+    z-index: 25;
+    display: flex;
+    flex-direction: row;
+    padding: 0.4rem;
+}
+
+.chat-input > input {
+    flex-grow: 9;
+}
+
+.chat-input > input:hover {
+    box-shadow: 0px 0px 4px 4px rgba(146, 180, 255, 0.781);
+}
+
+.chat-input > button {
+    margin-left: 1rem;
+    flex-grow: 1;
+}
+
+.message {
+    font-family: Impact, Charcoal, sans-serif;
+    font-weight: 200;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.message > * {
+    padding: 0.2rem;
+}
+
+.message > header {
+    background-color: rgb(80, 147, 223);
+    min-width: 120px;
+    max-width: 120px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.message > p {
+    background-color: white;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.message > footer {
+    background-color: rgb(80, 147, 223);
+    min-width: 80px;
+    max-width: 120px;
+    font-weight: bold;
+    text-align: center;
+}

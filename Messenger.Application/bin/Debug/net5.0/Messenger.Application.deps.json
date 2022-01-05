@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Messenger.Application/1.0.0": {
+        "dependencies": {
+          "Messenger.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Messenger.Application.dll": {}
+        }
+      },
+      "Messenger.Domain/1.0.0": {
+        "runtime": {
+          "Messenger.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Messenger.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Messenger.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger</title>
+
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body>
+    <div class="navbar">
+
+    </div>
+
+    <div class="main">
+        <vc:room></vc:room>
+        
+        <div class="chat">
+            @RenderBody()
+        </div>
+    </div>
+
+    @using (Html.BeginForm("CreateNewChat", "Home"))
+    {
+         <input type="text" name="name" />
+         <br />
+         <input type="submit" value="Click me" />
+    }
+
+    <!-- <div class="dialog.creation">
+        <div class="dialog.creation.box">
+            <header>New dialog</header>
+            <div>
+                <input name="dialog.name">
+            </div>
+            <footer>
+                <button>Create dialog</button>
+            </footer>
+        </div>
+    </div> -->
+</body>
+</html>

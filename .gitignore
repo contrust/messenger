@@ -1,0 +1,4 @@
+.idea*
+Messenger.Interface/appsettings.json
+Messenger.Infrastructure/Migrations
+Messenger.Interface/Startup.cs

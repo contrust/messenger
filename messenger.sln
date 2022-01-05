@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messenger.Application", "Messenger.Application\Messenger.Application.csproj", "{8ABFB4F3-9A7D-4DA9-A7DA-925D34A61DCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messenger.Domain", "Messenger.Domain\Messenger.Domain.csproj", "{D20D3E47-34E6-4B1B-8C2B-C434EFB72293}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messenger.Interface", "Messenger.Interface\Messenger.Interface.csproj", "{A549BC0C-BB92-433E-A51F-370016A2542F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8ABFB4F3-9A7D-4DA9-A7DA-925D34A61DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ABFB4F3-9A7D-4DA9-A7DA-925D34A61DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ABFB4F3-9A7D-4DA9-A7DA-925D34A61DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ABFB4F3-9A7D-4DA9-A7DA-925D34A61DCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D20D3E47-34E6-4B1B-8C2B-C434EFB72293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20D3E47-34E6-4B1B-8C2B-C434EFB72293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20D3E47-34E6-4B1B-8C2B-C434EFB72293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20D3E47-34E6-4B1B-8C2B-C434EFB72293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A549BC0C-BB92-433E-A51F-370016A2542F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A549BC0C-BB92-433E-A51F-370016A2542F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A549BC0C-BB92-433E-A51F-370016A2542F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A549BC0C-BB92-433E-A51F-370016A2542F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
