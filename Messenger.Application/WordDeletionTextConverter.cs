@@ -4,9 +4,9 @@ namespace Messenger.Application.MessageHandlers
 {
     public class WordDeletionTextConverter: WordReplacingTextConverter
     {
-        public WordDeletionTextConverter()
+        public WordDeletionTextConverter(HashSet<string> wordsForReplace = null)
         {
-            this.wordsForReplace = new HashSet<string>() {"makaka"};
+            this.wordsForReplace = wordsForReplace ?? new HashSet<string>();
         }
         public override string ConvertWord(string word)
         {

@@ -6,7 +6,7 @@ namespace Messenger.Application.MessageHandlers
     {
         public StarReplacerTextConverter(HashSet<string> wordsForReplace = null)
         {
-            this.wordsForReplace = wordsForReplace;
+            this.wordsForReplace = wordsForReplace ?? new HashSet<string>();
         }
         public override string ConvertWord(string word)
         {
