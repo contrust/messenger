@@ -6,7 +6,7 @@ using Messenger.Domain.Models;
 
 namespace Messenger.Tests
 {
-    public class DuplicateRemovalMessagesHandlerTests
+    public class DuplicateRemoverMessagesHandlerTests
     {
         private DuplicateRemoverMessagesHandler handler { get; set; }
         private static readonly Message message1 = new Message { Sender = new User {Id = 0} , Content = "similar"};

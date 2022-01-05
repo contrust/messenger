@@ -6,7 +6,7 @@ using Messenger.Domain.Models;
 
 namespace Messenger.Tests
 {
-    public class FrequencyMessagesHandlerTests
+    public class FrequencyLimiterMessagesHandlerTests
     {
         private FrequencyLimiterMessagesHandler handler { get; set; }
         private static readonly Message message1 = new Message { Sender = new User {Id = 0} , Date = new DateTime(1,1,1,1,1, 0)};
