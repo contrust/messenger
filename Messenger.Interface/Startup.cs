@@ -16,17 +16,17 @@ namespace Messenger.Interface
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            this.configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        private IConfiguration configuration { get; }
 
 
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews(options => options.EnableEndpointRouting = false);
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnections")));
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnections")));
             services.AddIdentity<User, IdentityRole>(options =>
             {
                 options.Password.RequireDigit = false;
@@ -36,7 +36,6 @@ namespace Messenger.Interface
             }).
                 AddEntityFrameworkStores<ApplicationDbContext>().
                 AddDefaultTokenProviders();
-            services.AddSignalR();
             foreach (var handlerType in AppDomain.CurrentDomain.GetAssemblies().SelectMany(x => x.GetTypes()).Where(x =>
                          !x.IsAbstract && x.IsClass &&
                          x.GetInterface(nameof(IMessagesHandler)) == typeof(IMessagesHandler)))
