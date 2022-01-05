@@ -19,7 +19,7 @@ namespace Messenger.Application.MessageHandlers
                     $"https://translate.googleapis.com/translate_a/single?client=gtx&" +
                     $"sl=ru&" +
                     $"tl=en&" +
-                    $"dt=t&q={HttpUtility.UrlEncode(sourceText)}";
+                    $"dt=t&dj=1&q={HttpUtility.UrlEncode(sourceText)}";
                 using (WebClient wc = new WebClient())
                 {
                     wc.Headers.Add("user-agent",
@@ -29,13 +29,8 @@ namespace Messenger.Application.MessageHandlers
                     wc.Encoding = System.Text.Encoding.UTF8;
                     googleJsonTranslation = wc.DownloadString(url);
                 }
-                
-                var json = JsonConvert.DeserializeObject(googleJsonTranslation);
-                englishTranslation = ((((json as JArray).FirstOrDefault() as JArray)
-                        .FirstOrDefault() as JArray)
-                        .FirstOrDefault() as JValue)?
-                    .Value
-                    .ToString();
+                var json = (JObject)JsonConvert.DeserializeObject(googleJsonTranslation);
+                englishTranslation = String.Join(' ', json["sentences"].Select(x => x["trans"]));
             }
             catch (Exception)
             {
