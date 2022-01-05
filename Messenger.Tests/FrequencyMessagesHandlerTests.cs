@@ -6,12 +6,13 @@ using Messenger.Domain.Models;
 
 namespace Messenger.Tests
 {
-    public class DuplicateRemovalMessagesHandlerTests
+    public class FrequencyMessagesHandlerTests
     {
-        private DuplicateRemovalMessagesHandler handler { get; set; }
-        private static readonly Message message1 = new Message { Sender = new User {Id = 0} , Content = "similar"};
-        private static readonly Message message2 = new Message { Sender = new User {Id = 1} , Content = "similar"};
-        private static readonly Message message3 = new Message { Sender = new User {Id = 1} , Content = "different"};
+        private FrequencyMessagesHandler handler { get; set; }
+        private static readonly Message message1 = new Message { Sender = new User {Id = 0} , Date = new DateTime(1,1,1,1,1, 0)};
+        private static readonly Message message2 = new Message { Sender = new User {Id = 1} , Date = new DateTime(1,1,1,1,1, 0)};
+        private static readonly Message message3 = new Message { Sender = new User {Id = 1} , Date = new DateTime(1,1,1,1,1, 4)};
+        private static readonly Message message4 = new Message { Sender = new User {Id = 1} , Date = new DateTime(1,1,1,1,2, 0)};
 
         private static readonly TestCaseData[] testCases =
         {
@@ -20,16 +21,19 @@ namespace Messenger.Tests
             new TestCaseData(Array.Empty<Message>(), message1).Returns(message1),
             new TestCaseData(new Message[] {message1}, message1).Returns(null),
             new TestCaseData(new Message[] {message2}, message1).Returns(message1),
-            new TestCaseData(new Message[] {message1, message2}, message1).Returns(null),
+            new TestCaseData(new Message[] {message2}, message3).Returns(null),
+            new TestCaseData(new Message[] {message2, message3}, message4).Returns(message4),
             new TestCaseData(new Message[] {message1}, null).Returns(null),
             new TestCaseData(new Message[] {null}, message1).Returns(message1),
-            new TestCaseData(new Message[] {message2}, message3).Returns(message3),
+            new TestCaseData(new Message[] {message1, null}, message1).Returns(null),
+            new TestCaseData(new Message[] {message2}, message4).Returns(message4),
+            new TestCaseData(new Message[] {message4}, message1).Returns(message1),
         };
 
         [SetUp]
         public void Setup()
         {
-            handler = new DuplicateRemovalMessagesHandler();
+            handler = new FrequencyMessagesHandler();
         }
         
         [TestCaseSource(nameof(testCases))]
