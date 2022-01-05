@@ -4,9 +4,9 @@ namespace Messenger.Application.MessageHandlers
 {
     public class StarReplacerTextConverter: WordReplacingTextConverter
     {
-        public StarReplacerTextConverter()
+        public StarReplacerTextConverter(HashSet<string> wordsForReplace = null)
         {
-            this.wordsForReplace = new HashSet<string>() {"goose"};
+            this.wordsForReplace = wordsForReplace;
         }
         public override string ConvertWord(string word)
         {

@@ -12,7 +12,7 @@ namespace Messenger.Application.MessageHandlers
         }
         public Message HandleMessage(IEnumerable<Message> messages, Message newMessage)
         {
-            if (newMessage == null || newMessage.Content == null) return null;
+            if (messages == null || newMessage == null || newMessage.Content == null) return null;
             newMessage.Content = converter.Convert(newMessage.Content);
             return newMessage;
         }
