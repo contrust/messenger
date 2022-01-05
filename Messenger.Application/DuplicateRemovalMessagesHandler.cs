@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Messenger.Application.MessageHandlers
 {
-    public class DuplicateRemoverMessagesHandler: IMessagesHandler
+    public class DuplicateRemovalMessagesHandler: IMessagesHandler
     {
         public Message HandleMessage(IEnumerable<Message> messages, Message newMessage)
         {
