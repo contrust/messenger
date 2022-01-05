@@ -12,6 +12,7 @@
   - Account
   - Home
 ### Application:
+- RussianToEnglishTranslatorMessageHandler
 - DuplicateRemovalMessagesHandler
 - FrequencyMessagesHandler
 - StarReplacingMessagesHandler
