@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Dk/GXxkehxhntQgZ/ipOBPUrQMrzS7kqHO80oBNfFTraf0cnAoptTYAm2w18OKgu2AViE/EUZCSsF2yw3coBag==",
+  "dgSpecHash": "n6HP8ub5wffQtXu8Mpydliq86b0q04EhEC5YWRrcGNuZOxccx6miYhqu1Dubp5LaV5veY8IBFCY+oANO6gVLkQ==",
   "success": true,
   "projectFilePath": "/home/artem/matmex-messenger/Messenger.Application/Messenger.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/artem/.nuget/packages/newtonsoft.json/12.0.1/newtonsoft.json.12.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
