@@ -8,7 +8,7 @@ namespace Messenger.Tests
 {
     public class DuplicateRemovalMessagesHandlerTests
     {
-        private DuplicateRemovalMessagesHandler handler { get; set; }
+        private DuplicateRemoverMessagesHandler handler { get; set; }
         private static readonly Message message1 = new Message { Sender = new User {Id = 0} , Content = "similar"};
         private static readonly Message message2 = new Message { Sender = new User {Id = 1} , Content = "similar"};
         private static readonly Message message3 = new Message { Sender = new User {Id = 1} , Content = "different"};
@@ -29,7 +29,7 @@ namespace Messenger.Tests
         [SetUp]
         public void Setup()
         {
-            handler = new DuplicateRemovalMessagesHandler();
+            handler = new DuplicateRemoverMessagesHandler();
         }
         
         [TestCaseSource(nameof(testCases))]

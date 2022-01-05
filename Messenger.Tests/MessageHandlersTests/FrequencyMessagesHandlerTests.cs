@@ -8,7 +8,7 @@ namespace Messenger.Tests
 {
     public class FrequencyMessagesHandlerTests
     {
-        private FrequencyMessagesHandler handler { get; set; }
+        private FrequencyLimiterMessagesHandler handler { get; set; }
         private static readonly Message message1 = new Message { Sender = new User {Id = 0} , Date = new DateTime(1,1,1,1,1, 0)};
         private static readonly Message message2 = new Message { Sender = new User {Id = 1} , Date = new DateTime(1,1,1,1,1, 0)};
         private static readonly Message message3 = new Message { Sender = new User {Id = 1} , Date = new DateTime(1,1,1,1,1, 4)};
@@ -33,7 +33,7 @@ namespace Messenger.Tests
         [SetUp]
         public void Setup()
         {
-            handler = new FrequencyMessagesHandler();
+            handler = new FrequencyLimiterMessagesHandler();
         }
         
         [TestCaseSource(nameof(testCases))]

@@ -2,9 +2,9 @@ using System.Collections.Generic;
 
 namespace Messenger.Application.MessageHandlers
 {
-    public class WordDeletionTextConverter: WordReplacingTextConverter
+    public class WordRemoverTextConverter: WordReplacingTextConverter
     {
-        public WordDeletionTextConverter(HashSet<string> wordsForReplace = null)
+        public WordRemoverTextConverter(HashSet<string> wordsForReplace = null)
         {
             this.wordsForReplace = wordsForReplace ?? new HashSet<string>();
         }
