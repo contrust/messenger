@@ -7,19 +7,12 @@ namespace Messenger.Domain.Models
         public Chat()
         {
             Messages = new List<Message>();
-            Participants = new List<User>();
-        }
-        public enum DialogType
-        {
-            MultiUserChat,
-            PrivateChat,
-            PersonalChat,
-            Channel
+            Participants = new List<ChatParticipant>();
         }
         public int Id {get; set;}
         public string Name {get; set;}
-        public DialogType Type {get; set;}
-        public ICollection<User> Participants {get; set;}
+        public ChatType Type {get; set;}
+        public ICollection<ChatParticipant> Participants {get; set;}
         public ICollection<Message> Messages {get; set;}
     }
 }

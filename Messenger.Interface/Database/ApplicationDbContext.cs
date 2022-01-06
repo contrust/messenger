@@ -8,7 +8,8 @@ namespace Messenger.Interface.Database
     public class ApplicationDbContext : IdentityDbContext<Models.User>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
-        public DbSet<User> Users { get; set; }
+        public DbSet<User> DomainUsers { get; set; }
+        public DbSet<ChatParticipant> ChatParticipants { get; set; }
         public DbSet<Chat> Chats { get; set; }
         public DbSet<Message> Messages {get; set;}
     }

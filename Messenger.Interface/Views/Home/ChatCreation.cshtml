@@ -1,0 +1,15 @@
+@model Chat
+
+
+<div class="container">
+<div class="container-box">
+    <form asp-controller="Home" asp-action="CreateNewChat">
+        <input type="text" name="name"/>
+        <br/>
+        <select asp-for="Type" asp-items="Html.GetEnumSelectList<ChatType>()">
+        </select>
+        <br/>
+        <input type="submit" value="Create chat"/>
+    </form>
+</div>
+</div>

@@ -1,8 +1,14 @@
 @model IEnumerable<Chat>
 
 <div class="side-menu">
-    <a class="chat-navigation-button" href="#">
+    <a class="chat-navigation-button" asp-controller="Home" asp-action="ChatCreation">
         <strong>+</strong>
+    </a>
+    <a class="chat-navigation-button" asp-controller="Home" asp-action="ChatJoining">
+        <strong>🔍</strong>
+    </a>
+    <a class="chat-navigation-button" asp-controller="Account" asp-action="Logout">
+        <strong>←</strong>
     </a>
     @foreach(var chat in Model)
     {

@@ -49,14 +49,18 @@ namespace Messenger.Interface.Controllers
             {
                 UserName = username
             };
-            var result = await userManager.CreateAsync(user, password);
-            if (result.Succeeded)
+            if (password != null)
             {
-                await signInManager.SignInAsync(user, false);
-                dbContext.Users.Add(new Domain.Models.User{Name = username});
-                await dbContext.SaveChangesAsync();
-                return RedirectToAction("Index", "Home");
+                var result = await userManager.CreateAsync(user, password);
+                if (result.Succeeded)
+                {
+                    await signInManager.SignInAsync(user, false);
+                    dbContext.DomainUsers.Add(new Domain.Models.User { Name = username });
+                    await dbContext.SaveChangesAsync();
+                    return RedirectToAction("Index", "Home");
+                }
             }
+
             return RedirectToAction("Register", "Account");
         }
 
