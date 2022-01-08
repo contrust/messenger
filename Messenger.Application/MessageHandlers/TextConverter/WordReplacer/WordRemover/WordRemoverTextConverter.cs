@@ -6,11 +6,12 @@ namespace Messenger.Application.MessageHandlers
     {
         public WordRemoverTextConverter(HashSet<string> wordsForReplace = null)
         {
-            this.wordsForReplace = wordsForReplace ?? new HashSet<string>();
+            this.wordsForReplace = wordsForReplace ?? new HashSet<string> {"a", "an", "the"};
         }
-        public override string ConvertWord(string word)
+
+        protected override string ConvertWord(string word)
         {
-            return wordsForReplace.Contains(word) ? null : word;
+            return wordsForReplace.Contains(word.ToLower()) ? null : word;
         }
     }
 }

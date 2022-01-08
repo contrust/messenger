@@ -6,11 +6,12 @@ namespace Messenger.Application.MessageHandlers
     {
         public StarReplacerTextConverter(HashSet<string> wordsForReplace = null)
         {
-            this.wordsForReplace = wordsForReplace ?? new HashSet<string>();
+            this.wordsForReplace = wordsForReplace ?? new HashSet<string> {"lol", "rofl", "lmfao"};
         }
-        public override string ConvertWord(string word)
+
+        protected override string ConvertWord(string word)
         {
-            return wordsForReplace.Contains(word) ? new string('*', word.Length) : word;
+            return wordsForReplace.Contains(word.ToLower()) ? new string('*', word.Length) : word;
         }
     }
 }

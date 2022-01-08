@@ -5,7 +5,7 @@ namespace Messenger.Application.MessageHandlers
 {
     public abstract class TextConverterMessagesHandler: IMessagesHandler
     {
-        private ITextConverter converter;
+        protected ITextConverter converter { get; }
         public TextConverterMessagesHandler(ITextConverter converter)
         {
             this.converter = converter;
