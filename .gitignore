@@ -2,3 +2,4 @@
 .*/bin/Debug/net5.0
 .*/obj
 Messenger.Infrastructure/Migrations
+.github/workflows
