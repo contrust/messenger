@@ -20,7 +20,10 @@
 ### Domain:
 - User
 - Message
-- Dialog
+- Chat
+- ChatParticipant
+- ChatType
+- ChatRole
 ## Точки расширения:
 - Добавление новых обработчиков сообщений
 - Добавление новых ролей для пользователей в чате
