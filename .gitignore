@@ -1,4 +1,5 @@
-.idea*
-Messenger.Interface/appsettings.json
+.idea.*
+.*/bin/Debug/net5.0
+.*/obj
 Messenger.Infrastructure/Migrations
-Messenger.Interface/Startup.cs
+.github/workflows

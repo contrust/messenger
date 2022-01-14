@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messenger.Domain", "Messeng
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messenger.Interface", "Messenger.Interface\Messenger.Interface.csproj", "{A549BC0C-BB92-433E-A51F-370016A2542F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messenger.Tests", "Messenger.Tests\Messenger.Tests.csproj", "{A5DDDC0E-5E92-43AC-A97C-3E0DE3FB1E67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{A549BC0C-BB92-433E-A51F-370016A2542F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A549BC0C-BB92-433E-A51F-370016A2542F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A549BC0C-BB92-433E-A51F-370016A2542F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5DDDC0E-5E92-43AC-A97C-3E0DE3FB1E67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5DDDC0E-5E92-43AC-A97C-3E0DE3FB1E67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5DDDC0E-5E92-43AC-A97C-3E0DE3FB1E67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5DDDC0E-5E92-43AC-A97C-3E0DE3FB1E67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

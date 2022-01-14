@@ -18,7 +18,14 @@ namespace Messenger.Interface.ViewComponents
 
         public IViewComponentResult Invoke()
         {
-            var chats = dbContext.Chats.ToList();
+            var user = dbContext.DomainUsers.FirstOrDefault(user => user.Name == User.Identity.Name);
+            var chats = dbContext
+                .Chats
+                .Where(chat => 
+                    chat.Participants
+                        .Select(chatUser => chatUser.Participant)
+                        .Contains(user)
+                    );
             return View(chats);
         }
     }
