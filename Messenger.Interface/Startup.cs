@@ -26,7 +26,7 @@ namespace Messenger.Interface
         {
             services.AddControllersWithViews(options => options.EnableEndpointRouting = false);
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnections")));
+                options.UseNpgsql(configuration.GetConnectionString("DefaultConnections")));
             services.AddIdentity<User, IdentityRole>(options =>
             {
                 options.Password.RequireDigit = false;

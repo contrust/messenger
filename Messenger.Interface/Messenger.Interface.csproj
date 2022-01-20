@@ -10,6 +10,7 @@
     <_ContentIncludedByDefault Remove="Views\Home\Privacy.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.0" />
     <ProjectReference Include="..\Messenger.Application\Messenger.Application.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />

@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,7 +20,9 @@ namespace Messenger.Interface
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder => { webBuilder
-                .UseStartup<Startup>()
-                .UseUrls("http://localhost:2020"); });
+                    .UseUrls("http://*:4000")
+                    .UseContentRoot(Directory.GetCurrentDirectory())
+                    .UseIISIntegration()
+                .UseStartup<Startup>(); });
     }
 }
